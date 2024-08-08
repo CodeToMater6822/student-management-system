@@ -70,9 +70,7 @@ public class StudentController {
     //handler method to handle delete student from database
     @GetMapping("/{studentId}/delete")
     public String deleteStudent(@PathVariable("studentId") Long studentId){
-        System.out.println("1111111111111111111");
         studentService.deleteStudentById(studentId);
-        System.out.println("222222222222222222222");
         return "redirect:/student/users";
     }
 
